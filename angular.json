@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "imdb-movies"
+    }
+  },
+  "defaultProject": "imdb-movies",
+  "cli": {
+    "analytics": false
+  }
 }

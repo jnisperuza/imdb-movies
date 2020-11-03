@@ -1,0 +1,28 @@
+<header>
+  <div class="searchbox">
+    <input type="search" [formControl]="searchControl" />
+    <img src="assets/search.svg" />
+  </div>
+  <div class="session">
+    <img src="assets/user.png" />
+    <span>Jhon Doe</span>
+  </div>
+</header>
+<section>
+  <div class="movie" *ngFor="let movie of movieList">
+    <div class="wrapper">
+      <img [src]="movie.image" />
+      <div class="details">
+        <h5 title="{{ movie.fullTitle }}">{{ movie.fullTitle }}</h5>
+        <div class="row">
+          <span>Crew:</span>
+          <span title="{{ movie.description }}">{{ movie.description }}</span>
+        </div>
+        <div class="row">
+          <span>Rating:</span>
+          <span title="{{ movie.imDbRating }}">{{ movie.imDbRating }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
