@@ -37,7 +37,7 @@ export class MovieListComponent implements OnInit {
     }
     this.searchControl.valueChanges.subscribe(value => {
       if (value) {
-        this.movieList = this.originalData.filter(movie => movie?.fullTitle?.toLowerCase()?.includes(value));
+        this.movieList = this.originalData.filter(movie => movie?.fullTitle?.toLowerCase()?.includes(value.toLowerCase()));
       } else {
         this.movieList = this.originalData;
       }
