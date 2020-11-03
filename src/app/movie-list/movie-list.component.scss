@@ -17,14 +17,14 @@ header {
         grid-template-columns: 1fr 40px;
         align-items: center;
         justify-items: center;
-        width: 250px;
+        max-width: 250px;
         height: 40px;
         border: 1px solid rgba(242,244,246,0.7);
         border-radius: 4px;
         box-sizing: border-box;
 
         @media only screen and (max-width: 600px) {
-            width: 200px;
+            max-width: 100%;
         }
 
         input {
@@ -86,7 +86,7 @@ section {
     box-sizing: border-box;
 
     @media only screen and (max-width: 600px) {
-        grid-template-columns: repeat(auto-fill, 167px);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     div.movie {
@@ -97,17 +97,12 @@ section {
         &:hover {
             div.wrapper {
                 position: absolute;
-                width: 230px;
-                height: 330px;
+                width: calc(100% + 30px);
+                height: calc(100% + 30px);
                 top: -10px;
                 left: -15px;
                 z-index: 10;
                 box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
-                @media only screen and (max-width: 600px) {
-                    width: 197px;
-                    height: 267px;
-                }
 
                 div.details {
                     display: grid;
